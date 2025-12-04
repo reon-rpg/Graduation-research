@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新規会員登録・クーポン獲得 | Fraise de Lune</title>
+    
+    <link rel="stylesheet" href="css-Top/style.css">
+    <link rel="stylesheet" href="css-Top/login.css">
+    <link rel="icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="image-Top/f.png">
+    <link rel="shortcut icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-logo">Fraise de Lune</div>
+    </div>
+
+        <header class="header">
+        <div class="logo">
+            <h1><a href="index.html"><img class="top_logo" src="image-Top/logo.png"></a></h1>
+        </div>
+
+        <button id="darkModeToggle" aria-label="ダークモード切り替え" class="dark-mode-toggle">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+
+        <nav class="nav-pc">
+            <ul>
+                <li class="dropdown">
+                    <a>Items ▼</a> <ul class="dropdown-menu">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+            </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu" id="hamburger" aria-label="メニュー開閉" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-sp" id="nav-sp" aria-hidden="true">
+            <ul>
+                <li class="dropdown">
+                    <a href="cheek.html">Items ▼</a> <ul class="dropdown-menu" style="display: none;">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+            </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <div class="register-container">
+                <h2>MEMBER REGISTRATION</h2>
+                <p>新規会員登録で<br>今すぐ使える10%OFFクーポンを<br>プレゼント！</p>
+                
+                <div class="coupon-message">
+                    **Gmailアドレス**を登録して、<br>お得な特典をGETしましょう！
+                </div>
+
+                <form action="#" method="POST" id="registerForm">
+                    <div id="message" style="color:#c0392b;margin-bottom:15px;font-weight:bold;white-space:pre-wrap;"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" required placeholder="山田 花子">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required placeholder="@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">パスワード</label>
+                        <input type="password" id="password" name="password" required placeholder="8文字以上">
+                    </div>
+
+                    <button type="submit" class="register-button">会員登録してクーポンをゲット</button>
+                </form>
+
+                <div class="login-link">
+                    <p>すでにアカウントをお持ちですか？<br> <a href="login.html">ログインはこちら</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="couponModal" class="modal-overlay" style="display:none;"> <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="modal-title">会員登録完了＆<br>クーポン獲得！</h3>
+            <p class="modal-message">
+                この度はご登録いただきありがとうございます。
+                <br>今すぐ使える10%OFFクーポンを獲得しました！
+            </p>
+            <div class="coupon-code-display">
+                <p>【クーポンコード】</p>
+                <p id="modalCouponCode">LUNE10OFF</p>
+            </div>
+            <p class="modal-info">
+                このコードを決済時に入力してください。
+            </p>
+           <p class="modal-note">
+             ※クーポン情報は**画面にのみ表示されます。<br>メールによる送信はありません**ので、<br>コードを控えるか、スクリーンショットを保存してください。
+         </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://x.com/i/flow/login" target="_blank" aria-label="X">
+                    X　　↗
+                </a>
+                <a href="https://www.instagram.com/?hl=ja" target="_blank" aria-label="Instagram">
+                    Instagram　　↗
+                </a>
+                <a href="https://www.facebook.com/login.php/?lang=ja" target="_blank" aria-label="Facebook">
+                    Facebook　　↗
+                </a>
+            </div>
+
+            <div class="copyright">
+                <small>&copy; 2025 Fraise de Lune. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="to-top">TOP</a>
+    <script src="js-Top/script.js"></script>
+    <script src="js-Top/particles-config.js"></script>
+    <script src="js-Top/mouse-trail.js"></script>
+
+
+   <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, updateProfile, sendEmailVerification } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+    
+    function generateRandomCouponCode(length = 10) {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        return result;
+    }
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyB4CuUAhLFTCbQKwYvSARuiyZNC9oEwGx8",
+        authDomain: "fraise-de-lune-4218c.firebaseapp.com",
+        projectId: "fraise-de-lune-4218c",
+        storageBucket: "fraise-de-lune-4218c.firebasestorage.app",
+        messagingSenderId: "940100574267",
+        appId: "1:940100574267:web:57abcbb567d9d704bf901e"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const messageElement = document.getElementById("message");
+        const modal = document.getElementById("couponModal");
+    const closeModalButton = document.getElementById("closeModal");
+    const modalCouponCode = document.getElementById("modalCouponCode");
+    
+    const form = document.getElementById("registerForm");
+
+    if (form) {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            messageElement.textContent = "";
+
+            const email = document.getElementById("email")?.value;
+            const password = document.getElementById("password")?.value;
+            const name = document.getElementById("name")?.value;
+
+            if (!email || !password || !name) {
+                messageElement.style.color = "#c0392b";
+                messageElement.textContent = "すべての項目を入力してください。";
+                return;
+            }
+
+            if (!email.toLowerCase().endsWith('@gmail.com')) {
+                messageElement.style.color = "#c0392b";
+                messageElement.textContent = "ご利用いただけるメールアドレスは**Gmailのみ**です。";
+                return;
+            }
+
+            if (password.length < 8) {
+                messageElement.style.color = "#c0392b";
+                messageElement.textContent = "パスワードは8文字以上で設定してください。";
+                return;
+            }
+
+            const generatedCouponCode = generateRandomCouponCode(10); 
+
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+                const user = userCredential.user;
+
+                await updateProfile(user, {
+                    displayName: name
+                });
+
+                await sendEmailVerification(user); 
+                
+                form.reset();
+                
+                if (modal && modalCouponCode) {
+                    modalCouponCode.textContent = generatedCouponCode;
+                    modal.style.display = "flex"; // モーダルを表示
+                }
+
+                messageElement.style.color = "#27ae60"; 
+                messageElement.textContent = "登録に成功しました！\n**メールアドレス確認メールを送信しました**のでご確認ください。\n特典（クーポン）は画面に表示されたモーダルをご確認ください。\n";
+                
+            } catch (error) {
+                if (modal) {
+                    modal.style.display = 'none';
+                }
+                messageElement.style.color = "#c0392b";
+
+                let errorMessage = "登録に失敗しました。";
+                
+                if (error.code === 'auth/weak-password') {
+                    errorMessage = "パスワードは8文字以上で設定してください。"; 
+                } else if (error.code === 'auth/email-already-in-use') {
+                    errorMessage = "このGmailアドレスは既に登録されています。";
+                } else if (error.code === 'auth/invalid-email') {
+                    errorMessage = "無効なメールアドレス形式です。**Gmailアドレスを入力してください。**";
+                } else {
+                    console.error("Firebase Error:", error.code, error.message);
+                    
+                    const errorDetail = error.message ? error.message : error.toString();
+                    errorMessage = `登録に失敗しました。\nエラーコード: ${error.code || '不明'}\n詳細: ${errorDetail}\n詳細はコンソールをご確認ください。`;
+                }
+                
+                messageElement.textContent = errorMessage;
+            }
+        });
+    }
+
+    if (closeModalButton && modal) {
+        closeModalButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            messageElement.textContent = '';
+        });
+    }
+
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                messageElement.textContent = '';
+            }
+        });
+    }
+</script>
+</body>
+</html>

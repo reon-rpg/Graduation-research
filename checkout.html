@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カート - Fraise de Lune</title>
+    <link rel="icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="image-Top/f.png">
+    <link rel="shortcut icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="stylesheet" href="css-Top/style.css"> 
+    <link rel="stylesheet" href="css-Top/cart.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-logo">Fraise de Lune</div>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="index.html"><img class="top_logo" src="image-Top/logo.png"></a></h1>
+        </div>
+
+        <button id="darkModeToggle" aria-label="ダークモード切り替え" class="dark-mode-toggle">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+
+        <nav class="nav-pc">
+            <ul>
+                <li class="dropdown">
+                    <a>Items ▼</a> <ul class="dropdown-menu">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu" id="hamburger" aria-label="メニュー開閉" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-sp" id="nav-sp" aria-hidden="true">
+            <ul>
+                <li class="dropdown">
+                    <a href="cheek.html">Items ▼</a> <ul class="dropdown-menu" style="display: none;">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="checkout-page-main">
+        <h1 class="section-title">購入手続き</h1>
+        <form action="thankyou.html" method="POST" class="checkout-form">
+            
+            <h2 class="form-step-title">1. お届け先情報の入力</h2>
+            <fieldset id="shipping-info">
+                <legend>お届け先情報</legend> 
+                <input type="text" placeholder="お名前" required>
+                <input type="email" placeholder="メールアドレス" required>
+                <input type="tel" placeholder="電話番号" required>
+                <input type="text" placeholder="郵便番号 (例: 123-4567)" required>
+                <input type="text" placeholder="都道府県" required>
+                <input type="text" placeholder="市区町村番地" required>
+                <input type="text" placeholder="建物名・部屋番号（省略可）">
+            </fieldset>
+
+            <h2 class="form-step-title">2. お支払い方法の選択</h2>
+<fieldset id="payment-method">
+    <legend class="visually-hidden">お支払い方法</legend>
+    <div class="payment-option">
+        <label><input type="radio" name="payment" value="convenience" checked> コンビニ払い</label>
+    </div>
+    <div class="payment-option">
+        <label><input type="radio" name="payment" value="cod"> 代金引換</label>
+    </div>
+    <div class="payment-option">
+        <label><input type="radio" name="payment" value="bank"> 銀行振込</label>
+    </div>
+</fieldset>
+
+            <h2 class="form-step-title">3. 注文内容の最終確認</h2>
+            <div class="order-review">
+                <div class="review-item">商品名: シルキーマットリップスティック | 数量: 1 | 価格: ¥3,500</div>
+                <div class="review-item">商品名: ムーンライトアイシャドウパレット | 数量: 2 | 価格: ¥11,600</div>
+                <div class="review-summary">
+                    <p>小計: ¥ 15,100</p>
+                    <p>送料: ¥ 500</p>
+                    <p><strong>合計（税込）: ¥ 15,600</strong></p>
+                </div>
+            </div>
+
+            <button type="submit" class="place-order-button">注文を確定する</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="social-links">
+                <a href="https://x.com/i/flow/login" target="_blank" aria-label="X">X ↗</a>
+                <a href="https://www.instagram.com/?hl=ja" target="_blank" aria-label="Instagram">Instagram ↗</a>
+                <a href="https://www.facebook.com/login.php/?lang=ja" target="_blank" aria-label="Facebook">Facebook ↗</a>
+            </div>
+            <div class="copyright">
+                <small>&copy; 2025 Fraise de Lune. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="js-Top/auth.js"></script>
+    <script src="js-Top/script.js"></script>
+    <script src="js-Top/particles-config.js"></script>
+    <script src="js-Top/checkout.js"></script>
+    <script src="js-Top/cart.js"></script>
+    <script src="js-Top/mouse-trail.js"></script>
+</body>
+</html>

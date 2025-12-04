@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン | Fraise de Lune</title>
+    
+    <link rel="stylesheet" href="css-Top/style.css">
+    <link rel="stylesheet" href="css-Top/login.css">
+    <link rel="icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="image-Top/f.png">
+    <link rel="shortcut icon" href="image-Top/f.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+        <div class="loading-logo">Fraise de Lune</div>
+    </div>
+
+        <header class="header">
+        <div class="logo">
+            <h1><a href="index.html"><img class="top_logo" src="image-Top/logo.png"></a></h1>
+        </div>
+
+        <button id="darkModeToggle" aria-label="ダークモード切り替え" class="dark-mode-toggle">
+            <span class="icon-light">☀️</span>
+            <span class="icon-dark">🌙</span>
+        </button>
+
+        <nav class="nav-pc">
+            <ul>
+                <li class="dropdown">
+                    <a>Items ▼</a> <ul class="dropdown-menu">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+            </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-menu" id="hamburger" aria-label="メニュー開閉" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-sp" id="nav-sp" aria-hidden="true">
+            <ul>
+                <li class="dropdown">
+                    <a href="cheek.html">Items ▼</a> <ul class="dropdown-menu" style="display: none;">
+                        <li><a href="リップ１.html">Lip</a></li>
+                        <li><a href="チーク２.html">Cheek</a></li>                
+                        <li><a href="アイシャドウ３.html">Eye</a></li>
+                        <li><a href="パウダー４.html">Powder</a></li>
+                        <li><a href="コンシーラー５.html">Concealer</a></li>
+                        <li><a href="アイブロウ６.html">Eyebrow</a></li>
+            </ul>
+                </li>
+        
+                <li>
+                    <a href="new.html" class="shop-icon-link">　
+                        <img src="image-Top/icon3.png" alt="ログインバッグ" class="icon-normal">
+                        <img src="image-Top/icon_dark.png" alt="ログインバッグホバー" class="icon-hover">
+                        <img src="image-Top/icon_wh.png" alt="ログインバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cart.html" class="shop-icon-link">　
+                        <img src="image-Top/cart.png" alt="ショッピングバッグ" class="icon-normal">
+                        <img src="image-Top/cart_dark.png" alt="ショッピングバッグホバー" class="icon-hover">
+                        <img src="image-Top/cart_wh.png" alt="ショッピングバッグ-ダーク" class="icon-dark-mode">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register-section">
+            <div class="register-container">
+                <h2>MEMBER LOGIN</h2>
+                <p>登録済みの**Gmailアドレス**と<br>パスワードでログインしてください。</p>
+                
+                <form action="#" method="POST">
+                    <div id="message" style="color: #c0392b; margin-bottom: 15px; font-weight: bold; white-space: pre-wrap;"></div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" required placeholder="@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">パスワード</label>
+                        <input type="password" id="password" name="password" required placeholder="パスワードを入力">
+                    </div>
+
+                    <button type="submit" class="register-button">ログイン</button>
+                </form>
+
+                <div class="login-link">
+                    <p><a href="reset.html">パスワードをお忘れですか？</a></p>
+                    <p>まだアカウントをお持ちではありませんか？ <br><a href="new.html">新規会員登録はこちら</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://x.com/i/flow/login" target="_blank" aria-label="X">
+                    X　　↗
+                </a>
+                <a href="https://www.instagram.com/?hl=ja" target="_blank" aria-label="Instagram">
+                    Instagram　　↗
+                </a>
+                <a href="https://www.facebook.com/login.php/?lang=ja" target="_blank" aria-label="Facebook">
+                    Facebook　　↗
+                </a>
+            </div>
+
+            <div class="copyright">
+                <small>&copy; 2025 Fraise de Lune. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="to-top">TOP</a>
+    <script src="js-Top/script.js"></script>
+    <script src="js-Top/particles-config.js"></script>
+    <script src="js-Top/mouse-trail.js"></script>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+    // ① あなたのFirebase設定
+    const firebaseConfig = {
+        apiKey: "AIzaSyB4CuUAhLFTCbQKwYvSARuiyZNC9oEwGx8",
+        authDomain: "fraise-de-lune-4218c.firebaseapp.com",
+        projectId: "fraise-de-lune-4218c",
+        storageBucket: "fraise-de-lune-4218c.firebasestorage.app",
+        messagingSenderId: "940100574267",
+        appId: "1:940100574267:web:57abcbb567d9d704bf901e"
+    };
+
+    // Firebase初期化
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const messageElement = document.getElementById("message");
+
+    // ② フォーム送信時のログイン処理
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        messageElement.textContent = ""; // メッセージをクリア
+        
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // 【★修正】Gmailチェック
+        if (!email.toLowerCase().endsWith('@gmail.com')) {
+            messageElement.style.color = "#c0392b";
+            messageElement.textContent = "ご利用いただけるメールアドレスは**Gmailのみ**です。";
+            return; // 処理を中断
+        }
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+            // ログイン成功時はアラートなしで即座に遷移
+            window.location.href = "index.html"; 
+        } catch (error) {
+            // ログイン失敗時はフォーム上にエラーメッセージを表示
+            messageElement.style.color = "#c0392b"; // 失敗時を赤色に
+            
+            let errorMessage = "ログインに失敗しました。\nメールアドレスまたはパスワードを確認してください。";
+            
+            // Firebaseのエラーコードに基づいてメッセージを調整 (例)
+            if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password') {
+                errorMessage = "メールアドレスまたはパスワードが正しくありません。"; 
+            } else if (error.code === 'auth/invalid-email') {
+                errorMessage = "無効なメールアドレス形式です。**Gmailアドレスを入力してください。**"; 
+            }
+            
+            messageElement.textContent = errorMessage;
+        }
+    });
+</script>
+
+</body>
+</html>
